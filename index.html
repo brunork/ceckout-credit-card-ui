@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+    <title>Checkout / Credit Card UI</title>
+    <meta charset="UTF-8">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+    <div class="container">
+        <form>
+        <h2>Checkout / Finalizar compra</h2>
+                
+        <div class="animated flipInX">
+            <div class="card-wrapper"></div>
+        </div>
+
+        <div class="group" id="cardnumber">      
+            <input type="text" required type="tel" name="number">
+            <span class="highlight"><i class="fa fa-credit-card" aria-hidden="true"></i></span>
+            <span class="bar"></span>
+            <label>Número do Cartão</label>
+        </div>
+
+        <div class="group">      
+            <input type="text" required type="text" name="name">
+            <span class="highlight">
+            <i class="fa fa-user-o" aria-hidden="true"></i>
+            </span>
+            <span class="bar"></span>
+            <label>Nome Completo</label>
+        </div>
+        <div class="col-md-12">
+            <div class="col-md-6">
+            <div class="group" >      
+                <input type="text" required type="tel" name="expiry">
+                <span class="highlight">
+                <i class="fa fa-calendar" aria-hidden="true"></i>
+                </span>
+                <span class="bar"></span>
+                <label>Data de Validade</label>
+            </div>
+            </div>
+
+        <div class="col-md-6">
+            <div class="group" >      
+            <input type="text" required type="tel" name="cvc">
+            <span class="highlight"><i class="fa fa-lock" aria-hidden="true"></i></span>
+            <span class="bar"></span>
+            <label>CVC</label>
+        </div>
+        </div>
+
+        <div class="btn-wrap">
+            <button>Comprar</button>
+        </div>
+
+        </form>
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="/js/card.js"></script>
+    <script src="/js/jquery.card.js"></script>
+    <script>
+        new Card({
+        form: document.querySelector('form'),
+        container: '.card-wrapper'
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css?family=Karla&display=swap');
+
+* { box-sizing:border-box; }
+
+body {
+  background-image: url(https://i.pinimg.com/originals/13/0a/15/130a15d4d749e48ca8a92224b0780c71.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 800px;
+}
+.container { 
+/*   border: 1px solid #000; */
+  border-radius: 10px;
+  font-family: 'Karla', sans-serif;
+  width:500px; 
+  margin:30px auto 0; 
+  display:fixed; 
+  padding:10px 50px 50px;
+  background: rgb(125,168,220);
+  -webkit-box-shadow: 9px 11px 20px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 9px 11px 20px 0px rgba(0,0,0,0.75);
+  box-shadow: 9px 11px 20px 0px rgba(0,0,0,0.75);
+}
+.container:hover{
+  -webkit-box-shadow: 4px 4px 21px -1px rgba(255,255,255,1);
+  -moz-box-shadow: 4px 4px 21px -1px rgba(255,255,255,1);
+  box-shadow: 4px 4px 21px -1px rgba(255,255,255,1);
+}
+.jp-card-container {
+  width: 100% !important;
+  min-height: 220px;
+}
+h2 { 
+  text-align:center; 
+  margin-bottom:50px; 
+  color: #fafafa;
+}
+h2 small { 
+  font-weight:normal; 
+  color:#fafafa; 
+  display:block; 
+}
+.titulo-wrap {
+  background: black;
+}
+
+/* form style */
+#cardnumber {
+  margin-top: 40px;
+}
+.group        { 
+  position:relative; 
+  margin-bottom:25px; 
+}
+input         {
+  font-size:18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width:100%;
+  border:none;
+  border-bottom:1px solid #020202;
+  background: rgb(235,147,241);
+/*   background: #302972; */
+}
+input:focus     { 
+  outline:none; 
+}
+input::placeholder {
+  color: white !important;
+}
+.btn-wrap button {
+  width: 100%;
+  height: 50px;
+  font-size: 1.2em;
+  background: #141133;
+  border: none;
+  color: #fafafa;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* Label */
+label          {
+  color:#fafafa; 
+  font-size:14px;
+  font-weight: 200 !important;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label    {
+  top:-20px;
+  font-size:10px;
+  color:#fafafa;
+}
+
+/* Bottom bars */
+.bar  { position:relative; display:block; width:100%; }
+.bar:before, .bar:after   {
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#020202; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* Highlighter */
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* animations */
+@-webkit-keyframes inputHighlighter {
+  from { background:#020202; }
+  to  { width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+  from { background:#020202; }
+  to  { width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+  from { background:#020202; }
+  to  { width:0; background:transparent; }
+}
